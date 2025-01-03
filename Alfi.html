@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Halaman Utama -->
+        <div id="homePage">
+            <h1>Perpustakaan</h1>
+            <form id="bookForm">
+                <input type="text" id="bookTitle" placeholder="Judul Buku" required>
+                <input type="text" id="bookAuthor" placeholder="Pengarang" required>
+                <textarea id="bookContentInput" placeholder="Isi Buku (Gunakan simbol dipanduan 'edit')" required></textarea>
+                <button type="submit">Tambah Buku</button>
+            </form>
+            <h2>Daftar Buku</h2>
+            <ul id="bookList"></ul>
+        </div>
+
+        <!-- Halaman Detail Buku -->
+        <div id="bookPage" style="display: none;">
+            <button id="homeButton">Home</button>
+            <h2 id="bookTitleDisplay"></h2>
+            <div id="bookContent"></div>
+            <button id="editButton">Edit</button>
+            <button id="deleteButton">Hapus</button>
+        </div>
+
+        <!-- Halaman Edit Buku -->
+        <div id="editPage" style="display: none;">
+            <div style="text-align: right;">
+                <button id="backButton">Kembali</button>
+            </div>
+            <h2>Edit Buku</h2>
+            <input type="text" id="editBookTitle" placeholder="Judul Buku" required>
+            <input type="text" id="editBookAuthor" placeholder="Pengarang" required>
+            <textarea id="editBookContent" placeholder="Isi Buku" required style="width: 100%; height: 200px;"></textarea>
+            
+            <!-- Simbol dan Keterangan -->
+            <div id="symbolsNote">
+                <h3>Gunakan simbol berikut di Isi Buku:</h3>
+                <ul>
+                    <li><b>Rata Kiri:</b> =:=| Teks Anda</li>
+                    <li><b>Rata Kanan:</b> =:| Teks Anda</li>
+                    <li><b>Rata Tengah:</b> =:~ Teks Anda</li>
+                    <li><b>Rata Penuh:</b> =:=: Teks Anda</li>
+                </ul>
+            </div>
+            <button id="saveButton">Simpan</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
